@@ -22,7 +22,7 @@ const SearchScreen: React.FC = () => {
     area: '',
   });
   const [showFilters, setShowFilters] = useState(false);
-  const [searchResults, setSearchResults] = useState<Mess[]>([]);
+  const [_searchResults, _setSearchResults] = useState<Mess[]>([]);
 
   const cuisineTypes = Object.values(CuisineType);
   const priceRanges = Object.values(PriceRange);
@@ -204,7 +204,7 @@ const SearchScreen: React.FC = () => {
 
       {/* Search Results */}
       <View style={styles.resultsContainer}>
-        {searchResults.length === 0 ? (
+        {_searchResults.length === 0 ? (
           <View style={styles.emptyState}>
             <Text style={styles.emptyStateIcon}>🔍</Text>
             <Text style={styles.emptyStateTitle}>Start your search</Text>
@@ -214,7 +214,7 @@ const SearchScreen: React.FC = () => {
           </View>
         ) : (
           <FlatList
-            data={searchResults}
+            data={_searchResults}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <TouchableOpacity style={styles.resultCard}>

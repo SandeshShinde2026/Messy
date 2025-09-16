@@ -5,8 +5,6 @@ import {
   StyleSheet,
   TouchableOpacity,
   SafeAreaView,
-  Image,
-  Dimensions,
 } from 'react-native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from '../../types';
@@ -19,8 +17,6 @@ type WelcomeScreenNavigationProp = NativeStackNavigationProp<
 interface WelcomeScreenProps {
   navigation: WelcomeScreenNavigationProp;
 }
-
-const { width, height } = Dimensions.get('window');
 
 const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
   return (

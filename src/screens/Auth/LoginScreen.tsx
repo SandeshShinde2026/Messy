@@ -34,9 +34,9 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const { login, isLoading } = useAuth();
 
-  const validateEmail = (email: string) => {
+  const validateEmail = (emailToValidate: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(emailToValidate);
   };
 
   const handleLogin = async () => {

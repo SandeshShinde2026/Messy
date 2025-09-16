@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   View,
   Text,
@@ -13,7 +13,6 @@ import {
 import { CompositeNavigationProp } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import { useAuth } from '../../contexts/AuthContext';
 import { MainTabParamList, RootStackParamList } from '../../types';
 
 type HomeScreenNavigationProp = CompositeNavigationProp<
@@ -187,7 +186,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
 
         {/* Messes Grid */}
         <View style={styles.messesGrid}>
-          {messesData.map((mess, index) => (
+          {messesData.map((mess, _index) => (
             <MessCard key={mess.id} mess={mess} />
           ))}
         </View>

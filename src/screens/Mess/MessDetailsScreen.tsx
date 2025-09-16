@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Image,
-  Dimensions,
   StatusBar,
   Linking,
 } from 'react-native';
@@ -22,8 +21,6 @@ interface MessDetailsScreenProps {
   navigation: MessDetailsScreenNavigationProp;
   route: MessDetailsScreenRouteProp;
 }
-
-const { width } = Dimensions.get('window');
 
 const getMessDetails = (messId: string) => {
   const messData = {

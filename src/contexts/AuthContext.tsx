@@ -90,7 +90,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const login = async (email: string, password: string): Promise<void> => {
+  const login = async (email: string, _password: string): Promise<void> => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
 
@@ -126,7 +126,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const register = async (name: string, email: string, phone: string, password: string): Promise<void> => {
+  const register = async (name: string, email: string, phone: string, _password: string): Promise<void> => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
 
